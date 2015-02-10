@@ -1,0 +1,18 @@
+.agenda {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/calendar_bg.jpg);
+  background-size: auto 100%;
+  width: 600px;
+  width: calc(100vw / 4);
+  float: right;
+  margin-top: -30px;
+}
+.featured {
+  background: rgb(0,0,0);
+  color: white;
+}
+.section-gallery {
+  background: #00adee;
+}

@@ -1,0 +1,21 @@
+@import '../css/parallax.css';
+@import '../css/homepage.css';
+
+
+/*temporal used for testing only*/
+body {
+  background-color: grey;
+}
+.home {
+  overflow: hidden;
+}
+header {
+  background-color: darkgrey;
+  height: 150px;
+}
+.wrapper {
+  max-width: 2880px;
+  display: block;
+  margin: 0 auto;
+}
+div, section, header, hgroup {border: 1px solid red}

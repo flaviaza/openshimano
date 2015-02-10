@@ -1,0 +1,84 @@
+.parallax {
+  background-color: orange;
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+.layer.has-bg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+.parallax .layer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.layer.base {
+  transform: translateZ(0);
+}
+.layer.deep-0 {
+  transform: translateZ(-2px) scale(3);
+}
+.layer.deep-1 {
+  transform: translateZ(-3px) scale(4);
+}
+.layer.deep-2 {
+  transform: translateZ(-5px) scale(6);
+}
+.layer.deep-3 {
+  transform: translateZ(-6px) scale(7);
+}
+.parallax .main-content {
+  overflow: hidden;
+}
+[class*="section-"] {
+  position: relative;
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.parallax .navbar {
+  margin-bottom: 0;
+  z-index:10;
+}
+.section-calendar{
+  height: 2600px;;
+}
+.parallax header.navbar{
+  transform: translateZ(-2px) scale(3) translateY(-145%)
+}
+.parallax .enduro-brand {
+  margin: 1330px 40vw 0;
+}
+.parallax .enduro-brand img {
+  max-width: 100%;
+}
+.parallax .featured {
+  top: 1774px;
+  z-index: 1
+}
+.parallax #next_race {
+  transform: translateZ(-6px) scale(7) translateY(-5%);
+  overflow: hidden;
+  height: 780px;
+}
+.parallax #last_race {
+  transform: translateZ(-6px) scale(7) translateY(103%);
+  overflow: hidden;
+  height: 480px;
+}
+.parallax #next_race img, .parallax #last_race img{
+  z-index: -2;
+  display: block;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}

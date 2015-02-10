@@ -45,15 +45,8 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-.parallax .navbar {
-  margin-bottom: 0;
-  z-index:10;
-}
 .section-calendar{
   height: 2600px;;
-}
-.parallax header.navbar{
-  transform: translateZ(-2px) scale(3) translateY(-145%)
 }
 .parallax .enduro-brand {
   margin: 1330px 40vw 0;

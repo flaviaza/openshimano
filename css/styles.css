@@ -1,21 +1,99 @@
 @import '../css/parallax.css';
 @import '../css/homepage.css';
 
-
-/*temporal used for testing only*/
-body {
-  background-color: grey;
-}
-.home {
-  overflow: hidden;
-}
-header {
-  background-color: darkgrey;
-  height: 150px;
-}
 .wrapper {
   max-width: 2880px;
   display: block;
   margin: 0 auto;
 }
-div, section, header, hgroup {border: 1px solid red}
+h1,h2,h3,h4,h5 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
+}
+a {
+  color: #00adee;
+}
+a:hover, a:focus {
+  color: #f3e600;
+}
+.stripped {
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 25%,
+      rgba(255,255,255,.04) 25%,
+      rgba(255,255,255,.043) 50%,
+      transparent 50%
+    );
+  background-position: top left;
+  background-size: 80px 80px;
+}
+header {
+  color: white;
+  text-shadow: 0 2px 4px black;
+  text-transform: uppercase;
+  box-shadow: 0 12px 40px rgba(0,0,0,.5);
+}
+header .navbar-header {
+  margin: 5px;
+}
+header .navbar-nav {
+  margin: 24px 0px 0;
+}
+header .navbar-header h1 {
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 18px;
+  font-size: 30px;
+}
+header .navbar-header h2 {
+  color: #00AEEF;
+  margin-top: 2px;
+  font-size: 22px;
+}
+header.navbar .navbar-header img{
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+header.navbar .navbar-header *{
+  white-space: nowrap;
+}
+header.navbar .navbar-nav>li>a:hover, header.navbar .navbar-nav>li>a:focus, header.navbar .navbar-nav>li.active>a {
+  background-color: transparent;
+}
+header.navbar .navbar-nav>li>a {
+  font-size: 22px;
+  font-weight: 300;
+  font-family: 'Oswald', sans-serif;
+}
+header.navbar .navbar-nav>li>a.social-link{
+  background-color: #00aeef;
+  color: white;
+  text-shadow: 0px 2px 4px #0098db;
+}
+header.navbar .navbar-nav>li>a.special-link {
+  color: #f3e600;
+}
+header.navbar .navbar-nav>li>a.special-link img {
+  margin-top: -1px;
+}
+header.navbar.stripped {
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 25%,
+      rgba(255,255,255,.02) 25%,
+      rgba(255,255,255,.02) 50%,
+      transparent 50%
+    ),
+    linear-gradient(to bottom, #181818 0%,#1b1b1b 100%);
+  background-color: #181818;
+  background-size: 80px 80px, 100% 100%;
+}
+.section-footer {
+  height: 500px;
+  background: black;
+}

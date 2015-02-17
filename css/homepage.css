@@ -1,24 +1,511 @@
-header.navbar { /*temporal fix*/
-  height: 50px;
+.home {
   overflow: hidden;
 }
 .agenda {
-  background-color: black;
+  display: block;
+  position: relative;
   color: white;
   overflow: hidden;
-  background-image: url(../img/calendar_bg.jpg);
   background-size: auto 100%;
   width: 600px;
-  width: calc(100vw / 4);
+  width: calc(100vw / 2.9);
   float: right;
-  margin-top: -30px;
-  padding-top: 0px;
-  padding-bottom: 205px;
+  margin-top: -70px;
+  padding: 52px 30px;
+  height: 500px;
+  box-sizing: border-box;
+}
+.agenda-layer .agenda {
+  background-image: -moz-linear-gradient(top,  rgba(27,14,1,0.8) 0%, rgba(27,14,1,0.8) 100%), url(../img/calendar_bg.jpg); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(27,14,1,0.8)), color-stop(100%,rgba(27,14,1,0.8))), url(../img/calendar_bg.jpg); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top,  rgba(27,14,1,0.8) 0%,rgba(27,14,1,0.8) 100%), url(../img/calendar_bg.jpg); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top,  rgba(27,14,1,0.8) 0%,rgba(27,14,1,0.8) 100%), url(../img/calendar_bg.jpg); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(top,  rgba(27,14,1,0.8) 0%,rgba(27,14,1,0.8) 100%), url(../img/calendar_bg.jpg); /* IE10+ */
+  background-image: linear-gradient(to bottom, rgba(27,14,1,0.8) 0%,rgba(27,14,1,0.8) 100%), url(../img/calendar_bg.jpg); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#804d3512', endColorstr='#803e2809',GradientType=0 ); /* IE6-9 */
+}
+.agenda-layer {
+  z-index: 1;
+}
+
+.agenda hgroup {
+  text-transform: uppercase;
+  text-shadow: 0px 2px 4px rgba(0,0,0,.4);
+}
+.agenda hgroup h1{
+  color: #0098dc;
+  font-size: 68px;
+  font-weight: normal;
+  position: relative
+}
+.agenda hgroup h1 span {
+ color: white;
+ font-size: 30px;
+ display: block;
+ position: absolute;
+ top: 4px;
+ left: 140px;
+}
+.agenda hgroup h1 small {
+  font-size: 20px;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 40px;
+  font-weight: 300;
+  left: 140px;
+}
+.agenda ul {
+  padding: 0;
+  list-style: none;
+  font-family: 'Oswald', sans-serif;
+}
+.agenda li {
+  position: relative;
+  opacity: .8;
+  color: #4d3215;
+  text-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+.agenda li.active {
+  opacity: 1;
+  color: white;
+}
+.agenda li h3 {
+  font-size: 40px;
+  float: left;
+  color: #4d3215;
+  margin-top: 12px;
+}
+.agenda li.active h3 {
+  color: #fff200;
+}
+.agenda li h3 span {
+  font-size: 26px;
+  vertical-align: top;
+  display: inline-block;
+}
+.agenda li > p {
+  margin-top: 12px;
+  padding-left: 160px;
+  padding-right: 102px;
+  font-size: 16px;
+}
+
+.agenda li p strong {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.agenda li p span {
+  display: block;
+  float: left;
+  font-weight: 300;
+}
+.agenda li p a {
+  display: none;
+  position: absolute;
+  right: 0px;
+  margin-top: -20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 5px 20px;
+}
+.agenda li.active p a {
+  display: block;
 }
 .featured {
-  background: rgb(0,0,0);
+  background-color: #001e29;
   color: white;
+  font-family: 'Oswald', sans-serif;
+  padding: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.5);
+}
+.featured.stripped {
+  background-image:
+    linear-gradient(to bottom, rgba(0,30,41,.0) 0%,rgba(0,30,41,1) 100%),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 25%,
+      rgba(255,255,255,.05) 25%,
+      rgba(255,255,255,.05) 50%,
+      transparent 50%
+    );
+    background-size: 300px 100%, 80px 80px;
+    background-repeat: repeat-x, repeat;
+    background-position: top left, bottom left;
+}
+.date-calendar {
+  display: block;
+  float-left;
+  width: 70px;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.date-calendar span {
+  display: block;
+  padding: 4px;
+}
+.date-calendar span:first-child {
+  background: #8f0606;
+  color: white;
+  font-size: 18px;
+}
+.date-calendar span:last-child {
+  background: white;
+  color: black;
+  font-size: 24px;
+}
+.description a {
+  min-width: 114px;
+}
+.featured .calendar-event {
+  position: relative;
+  padding-left: 90px;
+  text-transform: uppercase;
+  min-width: 440px;
+}
+.featured .calendar-event .date-calendar {
+  position: absolute;
+  margin-left: -90px;
+}
+.featured .calendar-event h4 {
+  color: #fff200;
+  font-size: 22px;
+  margin: 5px 0 0;
+}
+.featured .calendar-event h3 {
+  color: #00adee;
+  font-size: 60px;
+  margin: 5px 0;
+}
+.featured .calendar-event h3 span {
+  font-size: 35px;
+  vertical-align: top;
+}
+.featured .description > * {
+  display: block;
+}
+.featured .description {
+  font-size: 20px;
+}
+.featured .description strong {
+  font-weight: normal;
+}
+.featured .description span {
+  font-weight: 300;
+}
+.featured .description a {
+  display: block;
+  position: absolute;
+  right: 0px;
+  margin-top: -20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 5px 20px;
+  right: 0;
+  margin-top: -70px;
+}
+.featured .description a:last-child {
+  margin-top: -26px;
 }
 .section-gallery {
   background: #00adee;
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      #00adee,
+      #00adee 25%,
+      rgba(255,255,255,.1) 25%,
+      rgba(255,255,255,.1) 50%,
+      transparent 50%
+    );
+  background-position: 50% 50%;
+  background-size: 80px 80px;
+  background-repeat: repeat;
+  box-sizing: border-box;
+  padding: 10px;
+  text-shadow: 0px 2px 4px rgba(0,0,0,.4);
+}
+.agenda hgroup h1{
+  color: #0098dc;
+  font-size: 68px;
+  font-weight: normal;
+  position: relative
+}
+.agenda hgroup h1 span {
+ color: white;
+ font-size: 30px;
+ display: block;
+ position: absolute;
+ top: 4px;
+ left: 140px;
+}
+.agenda hgroup h1 small {
+  font-size: 20px;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 40px;
+  font-weight: 300;
+  left: 140px;
+}
+.agenda ul {
+  padding: 0;
+  list-style: none;
+  font-family: 'Oswald', sans-serif;
+}
+.agenda li {
+  position: relative;
+  opacity: .8;
+  color: #4d3215;
+  text-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+.agenda li.active {
+  opacity: 1;
+  color: white;
+}
+.agenda li h3 {
+  font-size: 40px;
+  float: left;
+  color: #4d3215;
+  margin-top: 12px;
+}
+.agenda li.active h3 {
+  color: #fff200;
+}
+.agenda li h3 span {
+  font-size: 26px;
+  vertical-align: top;
+  display: inline-block;
+}
+.agenda li > p {
+  margin-top: 12px;
+  padding-left: 160px;
+  padding-right: 102px;
+  font-size: 16px;
+}
+
+.agenda li p strong {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.agenda li p span {
+  display: block;
+  float: left;
+  font-weight: 300;
+}
+.agenda li p a {
+  display: none;
+  position: absolute;
+  right: 0px;
+  margin-top: -20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 5px 20px;
+}
+.agenda li.active p a {
+  display: block;
+}
+.featured {
+  background-color: #001e29;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  padding: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.5);
+}
+.featured.stripped {
+  background-image:
+    linear-gradient(to bottom, rgba(0,30,41,.0) 0%,rgba(0,30,41,1) 100%),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 25%,
+      rgba(255,255,255,.05) 25%,
+      rgba(255,255,255,.05) 50%,
+      transparent 50%
+    );
+    background-size: 300px 100%, 80px 80px;
+    background-repeat: repeat-x, repeat;
+    background-position: top left, bottom left;
+}
+.date-calendar {
+  display: block;
+  float-left;
+  width: 70px;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.date-calendar span {
+  display: block;
+  padding: 4px;
+}
+.date-calendar span:first-child {
+  background: #8f0606;
+  color: white;
+  font-size: 18px;
+}
+.date-calendar span:last-child {
+  background: white;
+  color: black;
+  font-size: 24px;
+}
+.description a {
+  min-width: 114px;
+}
+.featured .calendar-event {
+  position: relative;
+  padding-left: 90px;
+  text-transform: uppercase;
+  min-width: 440px;
+}
+.featured .calendar-event .date-calendar {
+  position: absolute;
+  margin-left: -90px;
+}
+.featured .calendar-event h4 {
+  color: #fff200;
+  font-size: 22px;
+  margin: 5px 0 0;
+}
+.featured .calendar-event h3 {
+  color: #00adee;
+  font-size: 60px;
+  margin: 5px 0;
+}
+.featured .calendar-event h3 span {
+  font-size: 35px;
+  vertical-align: top;
+}
+.featured .description > * {
+  display: block;
+}
+.featured .description {
+  font-size: 20px;
+}
+.featured .description strong {
+  font-weight: normal;
+}
+.featured .description span {
+  font-weight: 300;
+}
+.featured .description a {
+  display: block;
+  position: absolute;
+  right: 0px;
+  margin-top: -20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 5px 20px;
+  right: 0;
+  margin-top: -70px;
+}
+.featured .description a:last-child {
+  margin-top: -26px;
+}
+.section-gallery {
+  background: #00adee;
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      #00adee,
+      #00adee 25%,
+      rgba(255,255,255,.1) 25%,
+      rgba(255,255,255,.1) 50%,
+      transparent 50%
+    );
+  background-position: 50% 50%;
+  background-size: 80px 80px;
+  background-repeat: repeat;
+  box-sizing: border-box;
+  padding: 20px;
+  height: 1100px;
+}
+/*.section-gallery.has-bg:before {
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 25%,
+      rgba(255,255,255,.1) 25%,
+      rgba(255,255,255,.1) 50%,
+      transparent 50%
+    );
+  background-position: 50% 50%;
+  background-size: 80px 80px;
+  transform: translateZ(-.1px) scale(1.1);
+  background-repeat: repeat;
+  z-index: -1;
+  width: 100vw;
+  top: -45px;
+}*/
+.section-gallery [role="tabpanel"] {
+  text-transform: uppercase;
+  color: white;
+}
+.section-gallery > [role="tabpanel"]{
+  display: block;
+  float: left;
+}
+.section-gallery [role="tabpanel"] h2{
+  display: inline-block;
+  font-size: 58px;
+}
+.section-gallery [role="tabpanel"] ul{
+  display: inline-block;
+  margin: 0 20px;
+}
+.section-gallery > [role="tabpanel"] h2{
+  color: #f3e600;
+}
+.section-gallery .nav-tabs {
+  border-bottom: 1px solid transparent;
+}
+.section-gallery .nav-tabs>li>a {
+  font-size: 25px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  padding: 7px 30px;
+  border-radius: 0;
+  text-shadow: 0 0 0 transparent;
+  color: white;
+  background: #00a7e1;
+  box-shadow: 1px 1px 1px rgba(255,255,255,.3);
+  border: 1px solid transparent;
+}
+
+.section-gallery .nav-tabs>li.active>a, .section-gallery .nav-tabs>li.active>a:focus, .section-gallery .nav-tabs>li.active>a:hover{
+  background: #f3e600;
+  color: #00adee;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+.section-gallery .nav-tabs>li.disabled>a {
+  background: transparent;
+  box-shadow: none;
+  color: #0089cf;
+}
+.section-gallery .tab-pane .tab-pane {
+  max-width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.section-gallery .tab-pane .tab-pane img {
+  max-width: 100%;
 }

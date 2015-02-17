@@ -6,7 +6,7 @@
   overflow-y: auto;
   position: relative;
 }
-.layer.has-bg:before {
+.has-bg:before {
   content: "";
   position: absolute;
   top: 0;
@@ -22,18 +22,34 @@
 }
 .layer.base {
   transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
 }
 .layer.deep-0 {
   transform: translateZ(-2px) scale(3);
+  -webkit-transform: translateZ(-2px) scale(3);
+  -ms-transform: translateZ(-2px) scale(3);
 }
 .layer.deep-1 {
   transform: translateZ(-3px) scale(4);
+  -webkit-transform: translateZ(-3px) scale(4);
+  -ms-transform: translateZ(-3px) scale(4);
 }
+.layer.deep-1int {
+  transform: translateZ(-4.5px) scale(5.5);
+  -webkit-transform: translateZ(-4.5px) scale(5.5);
+  -ms-transform: translateZ(-4.5px) scale(5.5);
+}
+
 .layer.deep-2 {
   transform: translateZ(-5px) scale(6);
+  -webkit-transform: translateZ(-5px) scale(6);
+  -ms-transform: translateZ(-5px) scale(6);
 }
 .layer.deep-3 {
   transform: translateZ(-6px) scale(7);
+  -webkit-transform: translateZ(-6px) scale(7);
+  -ms-transform: translateZ(-6px) scale(7);
 }
 .parallax .main-content {
   overflow: hidden;
@@ -60,11 +76,15 @@
 }
 .parallax #next_race {
   transform: translateZ(-6px) scale(7) translateY(-5%);
+  -webkit-transform: translateZ(-6px) scale(7);
+  -ms-transform: translateZ(-6px) scale(7);
   overflow: hidden;
   height: 780px;
 }
 .parallax #last_race {
   transform: translateZ(-6px) scale(7) translateY(103%);
+  -webkit-transform: translateZ(-6px) scale(7) translateY(103%);
+  -ms-transform: translateZ(-6px) scale(7) translateY(103%);
   overflow: hidden;
   height: 480px;
 }

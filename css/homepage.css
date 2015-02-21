@@ -1,4 +1,3 @@
-
 .agenda-layer .agenda {
   background-image: -moz-linear-gradient(top,  rgba(27,14,1,0.8) 0%, rgba(27,14,1,0.8) 100%), url(../img/calendar_bg.jpg); /* FF3.6+ */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(27,14,1,0.8)), color-stop(100%,rgba(27,14,1,0.8))), url(../img/calendar_bg.jpg); /* Chrome,Safari4+ */
@@ -42,6 +41,9 @@
   width: 100%;
   height: 900px;
   border: none;
+}
+.layer {
+  position: relative;
 }
 .enduro-brand {
   display: block;

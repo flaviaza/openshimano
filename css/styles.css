@@ -65,6 +65,12 @@ header {
   text-transform: uppercase;
   box-shadow: 0 12px 40px rgba(0,0,0,.5);
 }
+header .navbar-collapse.in {
+  width: 100%;
+}
+.navbar-toggle .icon-bar {
+  background: #00a7e1;
+}
 header .navbar-header {
   margin: 5px;
 }

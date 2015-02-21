@@ -17,7 +17,33 @@
       </hgroup>
       <nav class="pull-right">
         <ul class="nav navbar-nav">
-          <li><a href="">Calendario</a></li>
+          <li>
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Calendario</a>
+              <div class="dropdown-menu" role="menu" aria-labelledby="calendario">
+                <div class="agenda">
+                  <ul>
+                    <li class="calendar-event active clearfix">
+                      <h3>EAS <strong>#1</strong> <span>VCP</span></h3>
+                      <p class="description"><strong>Roc de las Sierras</strong> <span>23/24 de Marzo</span> <a href="#" class="btn btn-primary btn-inverse">Mas Info</a></p>
+                    </li>
+                    <li class="calendar-event active clearfix">
+                      <h3>EAS <strong>#1</strong> <span>VCP</span></h3>
+                      <p class="description"><strong>Roc de las Sierras</strong> <span>23/24 de Marzo</span> <a href="#" class="btn btn-primary btn-inverse">Mas Info</a></p>
+                    </li>
+                    <li class="calendar-event clearfix">
+                      <h3>EAS <strong>#1</strong> <span>VCP</span></h3>
+                      <p class="description"><strong>Roc de las Sierras</strong> <span>23/24 de Marzo</span> <a href="#" class="btn btn-primary btn-inverse">Mas Info</a></p>
+                    </li>
+                    <li class="calendar-event clearfix">
+                      <h3>EAS <strong>#1</strong> <span>VCP</span></h3>
+                      <p class="description"><strong>Roc de las Sierras</strong> <span>23/24 de Marzo</span> <a href="#" class="btn btn-primary btn-inverse">Mas Info</a></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
           <li><a href="">Disciplina</a></li>
           <li><a href="">Media</a></li>
           <li><a href="">Noticias</a></li>
@@ -31,7 +57,7 @@
     <div class="wrapper parallax">
       <div class="main-content">
         <section class="section-calendar">
-          <div id="next_race" class="layer deep-2">
+          <div id="next_race" class="full-width layer deep-2">
             <img src="img/first_race.jpg" alt="proxima carrera"/>
           </div>
           <div class="agenda-layer layer deep-2">
@@ -62,7 +88,7 @@
           <div class="enduro-brand layer deep-1int">
             <img src="img/enduro_argentina.png" alt="brand"/>
           </div>
-          <div class="featured stripped layer deep-2">
+          <div class="featured stripped clearfix layer deep-2">
             <div class="calendar-event col-md-3">
               <p class="date-calendar"><span>Marzo</span><span>23/24</span></p>
               <h4>Próxima Carrera</h4>
@@ -76,7 +102,7 @@
               <p class="description"><strong>Roc de las Sierras</strong> <span>Villa Carlos Paz</span> <a href="#" class="btn btn-primary">Mas Info</a></p>
             </div>
           </div>
-          <div id="last_race" class="layer deep-3">
+          <div id="last_race" class="full-width layer deep-3">
             <img src="img/last_race.jpg" alt="ultima carrera"/>
           </div>
         </section>
@@ -132,20 +158,18 @@
       <footer class="section-footer">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-2">
-              <hgroup class="navbar-header">
-                <img src="img/logo.png" alt="brand" />
+            <div class="col-md-1">
+              <hgroup>
+                <img src="img/brand_white.png" alt="brand" class="brand" />
               </hgroup>
-              <nav class="pull-right">
-                <ul class="nav navbar-nav">
-                  <li><a href="">Calendario</a></li>
+              <nav>
+                <ul class="nav">
                   <li><a href="">Disciplina</a></li>
                   <li><a href="">Media</a></li>
                   <li><a href="">Noticias</a></li>
                   <li><a href="">Descargas</a></li>
                   <li><a href="">Contacto</a></li>
                   <li><a href="" class="social-link">Facebook</a></li>
-                  <li><a href="" class="special-link">Eventos <img src="img/sde.png" alt="SDE SRL" /></a></li>
                 </ul>
               </nav>
             </div>
@@ -173,16 +197,34 @@
                   </li>
                 </ul>
               </div>
-
             </div>
-            <div class="col-md-6">
-              marcas
+            <div class="col-md-2">
+              <div class="sponsor">
+                <img src="img/open_shimano.png" alt="" />
+                <a href="#" class="btn btn-primary btn-hightlight">facebook</a>
+                <a href="#" class="btn btn-primary btn-hightlight">sitio oficial</a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="sponsor">
+                <img src="img/riders_cup.png" alt="" />
+                <a href="#" class="btn btn-primary btn-hightlight">facebook</a>
+                <a href="#" class="btn btn-primary btn-hightlight">sitio oficial</a>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <img src="img/ride_white.png" alt="" class="brand pull-right"/>
+              <div class="sponsor">
+                <img src="img/girando.png" alt="" />
+                <a href="#" class="btn btn-primary btn-hightlight">facebook</a>
+                <a href="#" class="btn btn-primary btn-hightlight">sitio oficial</a>
+              </div>
             </div>
           </div>
         </div>
       </footer>
 
-    </div>
+          </div>
     <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/libs/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
   </body>

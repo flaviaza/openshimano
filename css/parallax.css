@@ -6,6 +6,8 @@
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 .has-bg:before {
   content: "";
@@ -87,4 +89,8 @@
   width: 100vw;
   margin: 0;
   padding: 0;
+}
+
+.home {
+  overflow: hidden;
 }

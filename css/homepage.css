@@ -1,20 +1,4 @@
-.home {
-  overflow: hidden;
-}
-.agenda {
-  display: block;
-  position: relative;
-  color: white;
-  overflow: hidden;
-  background-size: auto 100%;
-  width: 600px;
-  width: calc(100vw / 2.9);
-  float: right;
-  margin-top: -70px;
-  padding: 52px 30px;
-  height: 500px;
-  box-sizing: border-box;
-}
+
 .agenda-layer .agenda {
   background-image: -moz-linear-gradient(top,  rgba(27,14,1,0.8) 0%, rgba(27,14,1,0.8) 100%), url(../img/calendar_bg.jpg); /* FF3.6+ */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(27,14,1,0.8)), color-stop(100%,rgba(27,14,1,0.8))), url(../img/calendar_bg.jpg); /* Chrome,Safari4+ */
@@ -27,97 +11,11 @@
 .agenda-layer {
   z-index: 1;
 }
-
-.agenda hgroup {
-  text-transform: uppercase;
-  text-shadow: 0px 2px 4px rgba(0,0,0,.4);
-}
-.agenda hgroup h1{
-  color: #0098dc;
-  font-size: 68px;
-  font-weight: normal;
-  position: relative
-}
-.agenda hgroup h1 span {
- color: white;
- font-size: 30px;
- display: block;
- position: absolute;
- top: 4px;
- left: 140px;
-}
-.agenda hgroup h1 small {
-  font-size: 20px;
-  color: white;
-  display: block;
-  position: absolute;
-  top: 40px;
-  font-weight: 300;
-  left: 140px;
-}
-.agenda ul {
-  padding: 0;
-  list-style: none;
-  font-family: 'Oswald', sans-serif;
-}
-.agenda li {
-  position: relative;
-  opacity: .8;
-  color: #4d3215;
-  text-shadow: 0 2px 4px rgba(0,0,0,.5);
-}
-.agenda li.active {
-  opacity: 1;
-  color: white;
-}
-.agenda li h3 {
-  font-size: 40px;
-  float: left;
-  color: #4d3215;
-  margin-top: 12px;
-}
-.agenda li.active h3 {
-  color: #fff200;
-}
-.agenda li h3 span {
-  font-size: 26px;
-  vertical-align: top;
-  display: inline-block;
-}
-.agenda li > p {
-  margin-top: 12px;
-  padding-left: 160px;
-  padding-right: 102px;
-  font-size: 16px;
-}
-
-.agenda li p strong {
-  display: block;
-  text-transform: uppercase;
-  font-weight: 400;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+#next_race, #last_race {
   overflow: hidden;
+  height: 494px;
 }
-.agenda li p span {
-  display: block;
-  float: left;
-  font-weight: 300;
-}
-.agenda li p a {
-  display: none;
-  position: absolute;
-  right: 0px;
-  margin-top: -20px;
-  text-transform: uppercase;
-  border-radius: 0;
-  font-weight: 300;
-  font-size: 16px;
-  padding: 5px 20px;
-}
-.agenda li.active p a {
-  display: block;
-}
+
 .featured {
   background-color: #001e29;
   color: white;
@@ -139,6 +37,15 @@
     background-size: 300px 100%, 80px 80px;
     background-repeat: repeat-x, repeat;
     background-position: top left, bottom left;
+}
+.enduro-brand {
+  display: block;
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  margin: 0 0 0 -200px;
+  top: 526px;
+  text-align: center;
 }
 .date-calendar {
   display: block;
@@ -367,6 +274,12 @@
 }
 .description a {
   min-width: 114px;
+}
+.section-calendar .agenda {
+  position: absolute;
+  right: 0;
+  top: 90px;
+  padding: 52px 30px;
 }
 .featured .calendar-event {
   position: relative;

@@ -1,6 +1,9 @@
-@import '../css/parallax.css';
+/* @import '../css/parallax.css';*/
 @import '../css/homepage.css';
 
+.main-content {
+  padding-top: 96px;
+}
 .wrapper {
   max-width: 2880px;
   display: block;
@@ -29,6 +32,33 @@ a:hover, a:focus {
   background-position: top left;
   background-size: 80px 80px;
 }
+.full-width, .full-width img {
+  display: block;
+  width: 100vw;
+}
+.btn {
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+.btn-hightlight {
+  background-color: #f3e600;
+  color: #00a7e1;
+  text-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+.btn-inverse {
+  background: white;
+  color: #00a7e1;
+  text-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+.btn-inverse:hover {
+  background-color: #6dcff6;
+  border-color: transparent;
+}
 header {
   color: white;
   text-shadow: 0 2px 4px black;
@@ -38,7 +68,7 @@ header {
 header .navbar-header {
   margin: 5px;
 }
-header .navbar-nav {
+header .nav {
   margin: 24px 0px 0;
 }
 header .navbar-header h1 {
@@ -60,23 +90,33 @@ header.navbar .navbar-header img{
 header.navbar .navbar-header *{
   white-space: nowrap;
 }
-header.navbar .navbar-nav>li>a:hover, header.navbar .navbar-nav>li>a:focus, header.navbar .navbar-nav>li.active>a {
+.nav>li>a:hover, .nav>li>.dropdown>a:hover, .nav>li>a:focus, .nav>li>.dropdown>a:focus, .nav>li.active>a, .nav>li.active>.dropdown>a {
   background-color: transparent;
+  text-decoration: none;
 }
-header.navbar .navbar-nav>li>a {
+.nav>li>a, .nav>li>.dropdown>a {
   font-size: 22px;
   font-weight: 300;
   font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  padding: 15px;
+  line-height: 20px;
+  display: block;
 }
-header.navbar .navbar-nav>li>a.social-link{
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+  background-color: transparent;
+  border-color: transparent;
+  color: #f3e600;
+}
+.nav>li>a.social-link{
   background-color: #00aeef;
   color: white;
   text-shadow: 0px 2px 4px #0098db;
 }
-header.navbar .navbar-nav>li>a.special-link {
+header.navbar .nav>li>a.special-link {
   color: #f3e600;
 }
-header.navbar .navbar-nav>li>a.special-link img {
+header.navbar .nav>li>a.special-link img {
   margin-top: -1px;
 }
 header.navbar.stripped {
@@ -93,7 +133,189 @@ header.navbar.stripped {
   background-color: #181818;
   background-size: 80px 80px, 100% 100%;
 }
+header .nav .dropdown-menu {
+  margin-top: 23px;
+  background: transparent;
+}
+header .open>.dropdown-menu:after {
+  display: block;
+  content: '\00a0';
+  position: fixed;
+  top: 98px;
+  left: 0;
+  width: 100vw;
+  height: 300px;
+  background-color: rgba(0, 137, 207, 0.85);
+  z-index:-1;
+  box-shadow: 0 12px 40px rgba(0,0,0,.5);
+}
+header .nav .dropdown-menu .agenda{
+  height: auto;
+  padding: 0;
+}
+header .agenda li, header .agenda li h3 {
+  color: #6dcff6;
+}
+.agenda {
+  display: block;
+  color: white;
+  overflow: hidden;
+  background-size: auto 100%;
+  width: 600px;
+  width: calc(100vw / 2.9);
+  padding: 5px 30px;
+  height: 500px;
+  box-sizing: border-box;
+}
+.agenda hgroup {
+  text-transform: uppercase;
+  text-shadow: 0px 2px 4px rgba(0,0,0,.4);
+}
+.agenda hgroup h1{
+  color: #0098dc;
+  font-size: 68px;
+  font-weight: normal;
+  position: relative
+}
+.agenda hgroup h1 span {
+ color: white;
+ font-size: 30px;
+ display: block;
+ position: absolute;
+ top: 4px;
+ left: 140px;
+}
+.agenda hgroup h1 small {
+  font-size: 20px;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 40px;
+  font-weight: 300;
+  left: 140px;
+}
+.agenda ul {
+  padding: 0;
+  list-style: none;
+  font-family: 'Oswald', sans-serif;
+}
+.agenda li {
+  position: relative;
+  opacity: .8;
+  color: #4d3215;
+  text-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+.agenda li.active {
+  opacity: 1;
+  color: white;
+}
+.agenda li h3 {
+  font-size: 40px;
+  float: left;
+  color: #4d3215;
+  margin-top: 12px;
+}
+.agenda li.active h3 {
+  color: #fff200;
+}
+.agenda li h3 span {
+  font-size: 26px;
+  vertical-align: top;
+  display: inline-block;
+}
+.agenda li > p {
+  margin-top: 12px;
+  padding-left: 160px;
+  padding-right: 102px;
+  font-size: 16px;
+}
+
+.agenda li p strong {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.agenda li p span {
+  display: block;
+  float: left;
+  font-weight: 300;
+}
+.agenda li p a {
+  display: none;
+  position: absolute;
+  right: 0px;
+  margin-top: -20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 5px 20px;
+}
+.agenda li.active p a {
+  display: block;
+}
+
 .section-footer {
   height: 500px;
   background: black;
+}
+.section-footer .brand {
+  max-height: 64px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.section-footer .agenda {
+  padding: 5px 10px;
+  width: 100%;
+}
+.section-footer .agenda hgroup h1 {
+  margin-top: 0;
+}
+.section-footer [class*="col-"]{
+  height: 500px;
+}
+.section-footer [class*="col-"]:hover {
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 25%,
+      rgba(255,255,255,.1) 25%,
+      rgba(255,255,255,.1) 50%,
+      transparent 50%
+    );
+  background-position: top left;
+  background-size: 80px 80px;
+}
+.section-footer .nav>li>a {
+  padding: 10px 15px;
+  display: inline-block;
+}
+.section-footer .sponsor {
+  padding: 96px 0;
+  margin-top: 40px;
+  text-align: center;
+}
+.section-footer .sponsor:last-child {
+  margin-top: 0;
+}
+.section-footer .sponsor img {
+  display: block;
+  margin: 0 auto;
+}
+/*fix for a layout out of the standards... :shit: */
+@media (min-width: 992px) {
+  .section-footer .col-md-1 {
+    width: 10%;
+  }
+  .section-footer .col-md-2 {
+    width: 18.8%;
+  }
+  .section-footer .sponsor img {
+    height: 150px;
+    width: auto;
+  }
 }

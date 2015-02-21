@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
     <title>open shimano</title>
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/libs/bootstrap-3.3.2-dist/css/bootstrap.min.css" title="" type="text/css" />
     <link rel="stylesheet" href="css/styles.css" title="main styles" type="text/css" />
   </head>
@@ -63,10 +63,10 @@
     <div class="wrapper parallax">
       <div class="main-content">
         <section class="section-calendar">
-          <div id="next_race" class="full-width layer deep-2">
+          <div id="next_race" class="full-width layer deep-2" data-stellar-ratio="0.8">
             <img src="img/first_race.jpg" alt="proxima carrera"/>
           </div>
-          <div class="agenda-layer layer deep-2">
+          <div class="agenda-layer layer deep-2" data-stellar-ratio="0.8">
             <div class="agenda">
               <div class="heading">
               <h1>2015 <span>Calendario</span> <small>/ Carreras anteriores</small></h1>
@@ -91,10 +91,10 @@
               </ul>
             </div>
           </div>
-          <div class="enduro-brand layer deep-1int">
+          <div class="enduro-brand layer deep-1int" data-stellar-ratio="0.5">
             <img src="img/enduro_argentina.png" alt="brand"/>
           </div>
-          <div class="featured stripped clearfix layer deep-2">
+          <div class="featured stripped clearfix layer deep-2" data-stellar-ratio="0.8">
             <div class="calendar-event col-md-3">
               <p class="date-calendar"><span>Marzo</span><span>23/24</span></p>
               <h4>Próxima Carrera</h4>
@@ -108,28 +108,28 @@
               <p class="description"><strong>Roc de las Sierras</strong> <span>Villa Carlos Paz</span> <a href="#" class="btn btn-primary">Mas Info</a></p>
             </div>
           </div>
-          <div id="last_race" class="full-width layer deep-3">
+          <div id="last_race" class="full-width layer deep-3" data-stellar-ratio="0.6">
             <img src="img/last_race.jpg" alt="ultima carrera"/>
           </div>
         </section>
         <section class="section-gallery has-bg">
-          <nav role="tabpanel">
+          <div role="tabpanel">
             <h2>Media</h2>
             <ul class="nav nav-tabs" role="tablist">
               <li role="presentation" class="active"><a href="#foto" aria-controls="foto" role="tab" data-toggle="tab">Foto</a></li>
               <li role="presentation"><a href="#video" aria-controls="video" role="tab" data-toggle="tab">Video</a></li>
             </ul>
-          </nav>
+          </div>
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="foto">
-              <nav role="tabpanel">
+              <div role="tabpanel">
                 <h2>Galerías</h2>
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#foto-EAS1" aria-controls="foto-EAS1" role="tab" data-toggle="tab">EAS #1</a></li>
                   <li role="presentation"><a href="#foto-EAS2" aria-controls="foto-EAS2" role="tab" data-toggle="tab">EAS #2</a></li>
                   <li role="presentation" class="disabled"><a href="" role="tab" data-toggle="tab" >EAS #3</a></li>
                 </ul>
-              </nav>
+              </div>
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="foto-EAS1">
                   <img src="img/gallery-pic1.jpg" alt="foto carrera 1" />
@@ -140,20 +140,20 @@
               </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="video">
-              <nav role="tabpanel">
+              <div role="tabpanel">
                 <h2>Galerías</h2>
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#video-EAS1" aria-controls="video-EAS1" role="tab" data-toggle="tab">EAS #1</a></li>
                   <li role="presentation"><a href="#video-EAS2" aria-controls="video-EAS2" role="tab" data-toggle="tab">EAS #2</a></li>
                   <li role="presentation" class="disabled"><a href="" role="tab" data-toggle="tab" >EAS #3</a></li>
                 </ul>
-              </nav>
+              </div>
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="video-EAS1">
-                  <iframe width="100%" height="900" src="https://www.youtube.com/embed/SxNO6YCYu-I" frameborder="0" allowfullscreen></iframe>
+                  <iframe class="embedded-video" src="https://www.youtube.com/embed/SxNO6YCYu-I" allowfullscreen></iframe>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="video-EAS2">
-                  <iframe width="100%" height="900" src="https://www.youtube.com/embed/SxNO6YCYu-I" frameborder="0" allowfullscreen></iframe>
+                  <iframe class="embedded-video" src="https://www.youtube.com/embed/SxNO6YCYu-I" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -230,8 +230,10 @@
         </div>
       </footer>
 
-          </div>
+    </div>
     <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/libs/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/libs/stellar.js/jquery.stellar.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
   </body>
 </html>

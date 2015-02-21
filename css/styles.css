@@ -173,17 +173,17 @@ header .agenda li, header .agenda li h3 {
   height: 500px;
   box-sizing: border-box;
 }
-.agenda hgroup {
+.agenda .heading {
   text-transform: uppercase;
   text-shadow: 0px 2px 4px rgba(0,0,0,.4);
 }
-.agenda hgroup h1{
+.agenda .heading h1{
   color: #0098dc;
   font-size: 68px;
   font-weight: normal;
   position: relative
 }
-.agenda hgroup h1 span {
+.agenda .heading h1 span {
  color: white;
  font-size: 30px;
  display: block;
@@ -191,7 +191,7 @@ header .agenda li, header .agenda li h3 {
  top: 4px;
  left: 140px;
 }
-.agenda hgroup h1 small {
+.agenda .heading h1 small {
   font-size: 20px;
   color: white;
   display: block;
@@ -277,7 +277,7 @@ header .agenda li, header .agenda li h3 {
   padding: 5px 10px;
   width: 100%;
 }
-.section-footer .agenda hgroup h1 {
+.section-footer .agenda .heading h1 {
   margin-top: 0;
 }
 .section-footer [class*="col-"]{

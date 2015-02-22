@@ -1,8 +1,17 @@
 jQuery(function ($) {
-  $.stellar({
-    // scrollProperty: 'transform',
-    positionProperty: 'transform'
+  var animate = true
+
+  $.stellar()
+
+  $('[data-footer]').hover(function () {
+    if (animate) {
+      animate = false
+
+      $('body').animate({ scrollTop: $(document).height() }, 1000)
+    }
   })
 
-  console.log('esteleado', $('body'))
+  $('[data-content]').hover(function () {
+    setTimeout(function () { animate = true }, 5000)
+  })
 })

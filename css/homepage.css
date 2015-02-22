@@ -1,3 +1,15 @@
+.layer {
+  position: absolute;
+}
+.section-calendar {
+  height: 1200px;
+  position: relative;
+  overflow: hidden;
+}
+.section-calendar .agenda {
+  padding: 52px 30px;
+  height: 600px;
+}
 .agenda-layer .agenda {
   background-image: -moz-linear-gradient(top,  rgba(27,14,1,0.8) 0%, rgba(27,14,1,0.8) 100%), url(../img/calendar_bg.jpg); /* FF3.6+ */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(27,14,1,0.8)), color-stop(100%,rgba(27,14,1,0.8))), url(../img/calendar_bg.jpg); /* Chrome,Safari4+ */
@@ -8,51 +20,28 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#804d3512', endColorstr='#803e2809',GradientType=0 ); /* IE6-9 */
 }
 .agenda-layer {
+  top: 0;
+  right: 0;
   z-index: 1;
 }
-#next_race, #last_race {
+.next-race, .last-race {
   overflow: hidden;
-  height: 494px;
+  height: 630px;
+  z-index: -1;
+}
+.last-race {
+  top: 612px;
 }
 
-.featured {
-  background-color: #001e29;
-  color: white;
-  font-family: 'Oswald', sans-serif;
-  padding: 20px;
-  box-shadow: 0 12px 40px rgba(0,0,0,.5);
-}
-.featured.stripped {
-  background-image:
-    linear-gradient(to bottom, rgba(0,30,41,.0) 0%,rgba(0,30,41,1) 100%),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 25%,
-      rgba(255,255,255,.05) 25%,
-      rgba(255,255,255,.05) 50%,
-      transparent 50%
-    );
-    background-size: 300px 100%, 80px 80px;
-    background-repeat: repeat-x, repeat;
-    background-position: top left, bottom left;
-}
-.embedded-video {
-  width: 100%;
-  height: 900px;
-  border: none;
-}
-.layer {
-  position: relative;
-}
 .enduro-brand {
   display: block;
   position: absolute;
   width: 400px;
   left: 50%;
   margin: 0 0 0 -200px;
-  top: 526px;
+  top: 416px;
   text-align: center;
+  z-index: 100;
 }
 .date-calendar {
   display: block;
@@ -79,6 +68,32 @@
 .description a {
   min-width: 114px;
 }
+.featured {
+  background-color: #001e29;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  padding: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.5);
+  width: 100%;
+  z-index: 10;
+  top: 492px;
+}
+.featured.stripped {
+  background-image:
+    linear-gradient(to bottom, rgba(0,30,41,.0) 0%,rgba(0,30,41,1) 100%),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 25%,
+      rgba(255,255,255,.05) 25%,
+      rgba(255,255,255,.05) 50%,
+      transparent 50%
+    );
+    background-size: 300px 100%, 80px 80px;
+    background-repeat: repeat-x, repeat;
+    background-position: top left, bottom left;
+}
+
 .featured .calendar-event {
   position: relative;
   padding-left: 90px;
@@ -131,24 +146,6 @@
 .featured .description a:last-child {
   margin-top: -26px;
 }
-.section-gallery {
-  background: #00adee;
-  background-image:
-    repeating-linear-gradient(
-      -45deg,
-      #00adee,
-      #00adee 25%,
-      rgba(255,255,255,.1) 25%,
-      rgba(255,255,255,.1) 50%,
-      transparent 50%
-    );
-  background-position: 50% 50%;
-  background-size: 80px 80px;
-  background-repeat: repeat;
-  box-sizing: border-box;
-  padding: 10px;
-  text-shadow: 0px 2px 4px rgba(0,0,0,.4);
-}
 .featured {
   background-color: #001e29;
   color: white;
@@ -195,12 +192,6 @@
 }
 .description a {
   min-width: 114px;
-}
-.section-calendar .agenda {
-  position: absolute;
-  right: 0;
-  top: 90px;
-  padding: 52px 30px;
 }
 .featured .calendar-event {
   position: relative;
@@ -271,25 +262,8 @@
   box-sizing: border-box;
   padding: 20px;
   height: 1100px;
+  text-shadow: 0px 2px 4px rgba(0,0,0,.4);
 }
-/*.section-gallery.has-bg:before {
-  background-image:
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 25%,
-      rgba(255,255,255,.1) 25%,
-      rgba(255,255,255,.1) 50%,
-      transparent 50%
-    );
-  background-position: 50% 50%;
-  background-size: 80px 80px;
-  transform: translateZ(-.1px) scale(1.1);
-  background-repeat: repeat;
-  z-index: -1;
-  width: 100vw;
-  top: -45px;
-}*/
 .section-gallery [role="tabpanel"] {
   text-transform: uppercase;
   color: white;
@@ -324,7 +298,6 @@
   box-shadow: 1px 1px 1px rgba(255,255,255,.3);
   border: 1px solid transparent;
 }
-
 .section-gallery .nav-tabs>li.active>a, .section-gallery .nav-tabs>li.active>a:focus, .section-gallery .nav-tabs>li.active>a:hover{
   background: #f3e600;
   color: #00adee;
@@ -342,4 +315,9 @@
 }
 .section-gallery .tab-pane .tab-pane img {
   max-width: 100%;
+}
+.embedded-video {
+  width: 100%;
+  height: 900px;
+  border: none;
 }

@@ -170,7 +170,6 @@ header .agenda li, header .agenda li h3 {
   width: 600px;
   width: calc(100vw / 2.9);
   padding: 5px 30px;
-  height: 500px;
   box-sizing: border-box;
 }
 .agenda .heading {
@@ -266,7 +265,11 @@ header .agenda li, header .agenda li h3 {
 
 .section-footer {
   height: 500px;
+  width: 100%;
   background: black;
+  position: fixed;
+  bottom: -415px;
+  z-index: 100;
 }
 .section-footer .brand {
   max-height: 64px;

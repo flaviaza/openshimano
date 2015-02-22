@@ -1,17 +1,19 @@
 jQuery(function ($) {
   var animate = true
 
-  $.stellar()
+  $.stellar({
+    positionProperty: 'transform'
+  })
 
-  $('[data-footer]').hover(function () {
+  $('[data-footer]').on('mouseenter', function () {
     if (animate) {
-      animate = false
-
-      $('html, body').animate({ scrollTop: $(document).height() }, 1000)
+      $('html, body').animate({ scrollTop: $(document).height() }, 1000, function () {
+        animate = false
+      })
     }
   })
 
-  $('[data-content]').hover(function () {
-    setTimeout(function () { animate = true }, 5000)
+  $(document).on('affixed-top.bs.affix', '[data-footer]', function () {
+    animate = true
   })
 })

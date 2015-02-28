@@ -24,7 +24,7 @@
   right: 0;
   z-index: 1;
 }
-.next-race, .last-race {
+.next-race, .last-race, .race-pic {
   overflow: hidden;
   height: 630px;
   z-index: -1;
@@ -32,7 +32,9 @@
 .last-race {
   top: 612px;
 }
-
+.race-pic {
+  height: 388px;
+}
 .enduro-brand {
   display: block;
   position: absolute;
@@ -274,7 +276,7 @@
 }
 .section-gallery [role="tabpanel"] h2{
   display: inline-block;
-  font-size: 58px;
+  font-size: 40px;
 }
 .section-gallery [role="tabpanel"] ul{
   display: inline-block;
@@ -282,6 +284,9 @@
 }
 .section-gallery > [role="tabpanel"] h2{
   color: #f3e600;
+}
+.section-gallery .inline-brand {
+  margin-top:20px;
 }
 .section-gallery .nav-tabs {
   border-bottom: 1px solid transparent;

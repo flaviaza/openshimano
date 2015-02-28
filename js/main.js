@@ -1,17 +1,29 @@
+var transformSupported = function () {
+  var prefixes = ['transform', 'WebkitTransform', 'MozTransform', 'OTransform', 'msTransform']
+  var div      = document.createElement('div')
+
+  for (var i = 0; i < prefixes.length; i++)
+    if (div && div.style[prefixes[i]] !== undefined) return true
+
+  return false
+}
+
 jQuery(function ($) {
   var animate = true
 
-  $.stellar()
+  $.stellar({
+    positionProperty: transformSupported() ? 'transform' : 'position'
+  })
 
-  $('[data-footer]').hover(function () {
+  $('[data-footer]').on('mouseenter', function () {
     if (animate) {
-      animate = false
-
-      $('html, body').animate({ scrollTop: $(document).height() }, 1000)
+      $('html, body').animate({ scrollTop: $(document).height() }, 1000, function () {
+        animate = false
+      })
     }
   })
 
-  $('[data-content]').hover(function () {
-    setTimeout(function () { animate = true }, 5000)
+  $(document).on('affixed-top.bs.affix', '[data-footer]', function () {
+    animate = true
   })
 })

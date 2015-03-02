@@ -1,4 +1,3 @@
-/* @import '../css/parallax.css';*/
 @import '../css/homepage.css';
 body {
   font-family: 'Oswald', sans-serif;
@@ -300,7 +299,7 @@ header .dropdown-menu.eventos img{
   z-index: 1000;
 }
 .section-footer {
-  height: 500px;
+  min-height: 500px;
   width: 100%;
   background: black;
 }

@@ -365,6 +365,7 @@ header .dropdown-menu.eventos img{
   line-height: 30px;
   font-size: 18px;
   padding-top: 20px;
+  padding-bottom: 100px;
 }
 .article p {
   margin-bottom: 30px;
@@ -396,10 +397,33 @@ header .dropdown-menu.eventos img{
   text-transform: uppercase;
   font-size: 40px;
   text-shadow: 1px 1px 2px rgba(0,0,0,.2);
+  margin: 20px 0 10px 0;
+  line-height: 1.1;
 }
 .title-horiz-bar .highlight {
   color: #00adee;
   text-shadow: 1px 1px 2px rgba(255,255,255,.2);
+}
+.title-horiz-bar .nav-tabs {
+  border-bottom: 0px solid transparent;
+}
+.title-horiz-bar .nav-tabs > li > a {
+  color: #fff200;
+  padding: 0 10px 0 0;
+  margin: 0;
+  border-color: transparent;
+  font-size: 40px;
+  line-height: 1.1;
+}
+.title-horiz-bar .nav-tabs > li > a:hover {
+  border-color: transparent;
+  color: #00adee;
+  background-color: transparent;
+}
+.title-horiz-bar .nav-tabs > li.active > a, .title-horiz-bar .nav-tabs > li.active > a:focus, .title-horiz-bar .nav-tabs > li.active > a:hover {
+  border-color: transparent;
+  color: #00adee;
+  background-color: transparent;
 }
 .nav-tabs.link-tabs {
   border-color: transparent;
@@ -485,4 +509,32 @@ header .dropdown-menu.eventos img{
 .table-clasif tbody em{
   font-style: normal;
   font-size: 16px;
+}
+.list {
+  font-size: 22px;
+  line-height: 2;
+  list-style: none;
+  padding: 0;
+}
+.venue {
+  margin-bottom: 40px;
+}
+.venue h3 {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+.venue .list li{
+  padding-left: 15px;
+}
+.venue .list li.contact {
+  padding-left: 0;
+}
+.venue .fa {
+  font-size: 16px;
+}
+.venue li.contact .fa {
+  margin-left: 15px;
+}
+.venue li.contact .fa:first-child {
+  margin-left: 0;
 }

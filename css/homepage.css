@@ -35,6 +35,7 @@
 .race-pic {
   height: 388px;
 }
+
 .enduro-brand {
   display: block;
   position: absolute;
@@ -318,4 +319,52 @@
   width: 100%;
   height: 900px;
   border: none;
+}
+
+/*** Responsive ***/ /*WIP*/
+@media (max-width: 720px) {
+ .race-pic, .next-race, .last-race {
+  height: auto;
+ }
+ .agenda-layer, .enduro-brand.layer {
+  display: none !important;
+ }
+ .featured.layer {
+  top: 192px;
+ }
+ .last-race {
+  top: 548px;
+ }
+ .section-calendar {
+  height: 690px;
+ }
+ .footer-proximity {
+  display: none;
+ }
+ .featured .calendar-event {
+  padding: 0 !important;
+  clear: both;
+  float: none !important;
+  width: 100% !important;
+  min-width: inherit !important;
+ }
+ .featured .calendar-event:first-child {
+  margin-bottom: 30px;
+ }
+ .featured .calendar-event h3 {
+  font-size: 35px !important;
+ }
+ .featured .calendar-event .date-calendar, .featured .calendar-event .description, .featured .calendar-event .description .btn {
+  display: block !important;
+  position: relative !important;
+  margin: 0 !important;
+ }
+ .featured .calendar-event .date-calendar {
+  float: left;
+  margin-right: 20px !important;
+ }
+ .featured .calendar-event .date-calendar span {
+  font-size: 14px;
+  display: inline;
+ }
 }

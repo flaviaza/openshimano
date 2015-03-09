@@ -26,4 +26,16 @@ jQuery(function ($) {
   $(document).on('affixed-top.bs.affix', '[data-footer]', function () {
     animate = true
   })
+
+  $('.navbar-fixed-top').on('show.bs.dropdown', function (event) {
+    var background = $('<div></div>').addClass('dropdown-menu-background')
+    var dropdown   = $(event.relatedTarget).siblings('.dropdown-menu')
+    var height     = dropdown.outerHeight()
+
+    dropdown.after(background.css('height', height))
+  })
+
+  $('.navbar-fixed-top').on('hide.bs.dropdown', function (event) {
+    $('.navbar-fixed-top .dropdown-menu-background').remove()
+  })
 })

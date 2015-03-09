@@ -144,21 +144,18 @@ header.navbar.stripped {
 header .nav .dropdown-menu {
   margin-top: 23px;
   background: transparent;
+  border: none;
+  box-shadow: none;
 }
-header .open>.dropdown-menu:after {
+header .nav .dropdown-menu-background {
   display: block;
-  content: '\00a0';
   position: fixed;
   top: 98px;
   left: 0;
-  width: 100vw;
-  height: 300px;
+  right: 0;
   background-color: rgba(0, 137, 207, 0.85);
   z-index:-1;
   box-shadow: 0 12px 40px rgba(0,0,0,.5);
-}
-header .open>.dropdown-menu.downloads:after {
-  height: 130px;
 }
 header .nav .dropdown-menu > ul {
   list-style: none;

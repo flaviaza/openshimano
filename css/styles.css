@@ -63,7 +63,7 @@ a:hover, a:focus {
 }
 header {
   color: white;
-  text-shadow: 0 2px 4px black;
+  text-shadow: 0 2px 4px rgba(0,0,0,.5);
   text-transform: uppercase;
   box-shadow: 0 12px 40px rgba(0,0,0,.5);
 }
@@ -73,27 +73,31 @@ header .navbar-collapse.in {
 .navbar-toggle .icon-bar {
   background: #00a7e1;
 }
+header .dropdown-menu a:not(.btn-inverse) {
+  color: white;
+}
 header .navbar-header {
   margin: 5px;
 }
 header .nav {
-  margin: 24px 0px 0;
+  margin: 14px 0px 0;
 }
 header .navbar-header h1 {
   font-weight: normal;
   margin-bottom: 0;
-  margin-top: 18px;
-  font-size: 30px;
+  margin-top: 14px;
+  font-size: 22px;
 }
 header .navbar-header h2 {
   color: #00AEEF;
   margin-top: 2px;
-  font-size: 22px;
+  font-size: 18px;
 }
 header.navbar .navbar-header img{
   display: block;
   float: left;
   margin-right: 10px;
+  height: 62px;
 }
 header.navbar .navbar-header *{
   white-space: nowrap;
@@ -142,23 +146,20 @@ header.navbar.stripped {
   background-size: 80px 80px, 100% 100%;
 }
 header .nav .dropdown-menu {
-  margin-top: 23px;
+  margin-top: 14px;
   background: transparent;
 }
 header .open>.dropdown-menu:after {
   display: block;
   content: '\00a0';
-  position: fixed;
-  top: 98px;
-  left: 0;
-  width: 100vw;
-  height: 300px;
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  width: 200vw;
+  height: 105%;
   background-color: rgba(0, 137, 207, 0.85);
   z-index:-1;
   box-shadow: 0 12px 40px rgba(0,0,0,.5);
-}
-header .open>.dropdown-menu.downloads:after {
-  height: 130px;
 }
 header .nav .dropdown-menu > ul {
   list-style: none;
@@ -177,18 +178,33 @@ header .nav .dropdown-menu .agenda{
 header .agenda li, header .agenda li h3 {
   color: #6dcff6;
 }
-header .dropdown-menu.eventos {
+header .dropdown-menu.events {
   width: 100vw;
   left: inherit;
   right: 0;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 0px;
 }
-header .dropdown-menu.eventos img{
+header .dropdown-menu.events img{
   max-width: 100%;
   max-height: 160px;
   display: block;
   margin: 0 auto;
+}
+header .dropdown-menu.contact {
+  left: inherit;
+  right: -250px;
+}
+header .dropdown-menu.contact form {
+  min-width: 650px;
+  margin-top: 20px;
+}
+header .dropdown-menu.contact form label {
+  font-weight: 300;
+}
+header .dropdown-menu.contact a.fa {
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+  margin-left: 10px;
 }
 .agenda {
   display: block;
@@ -380,10 +396,11 @@ header .dropdown-menu.eventos img{
   color: #00adee;
   margin: 30px 0;
 }
-.share-content a.fa{
+.share-content a.fa, form a.fa-facebook{
   background: #00adee;
   color: white;
   padding: 5px 10px;
+  text-shadow: 0 0 0 transparent;
 }
 .inline-brand {
   display: inline-block;
@@ -536,4 +553,9 @@ header .dropdown-menu.eventos img{
 }
 .venue li.contact .fa:first-child {
   margin-left: 0;
+}
+
+.form-control, .form-group button {
+  border-radius: 0;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.4);
 }

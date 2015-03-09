@@ -148,15 +148,15 @@ header.navbar.stripped {
 header .nav .dropdown-menu {
   margin-top: 14px;
   background: transparent;
+  border: none;
+  box-shadow: none;
 }
-header .open>.dropdown-menu:after {
+header .nav .dropdown-menu-background {
   display: block;
-  content: '\00a0';
-  position: absolute;
-  top: 0;
-  left: -100vw;
-  width: 200vw;
-  height: 105%;
+  position: fixed;
+  top: 98px;
+  left: 0;
+  right: 0;
   background-color: rgba(0, 137, 207, 0.85);
   z-index:-1;
   box-shadow: 0 12px 40px rgba(0,0,0,.5);

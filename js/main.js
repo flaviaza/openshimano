@@ -48,4 +48,7 @@ jQuery(function ($) {
       return false
     }
   })
+
+  //carousel from boostrap
+  $('.carousel').carousel()
 })

@@ -30,17 +30,22 @@ jQuery(function ($) {
   // SMOOTH SCROLLING
   // copied from https://css-tricks.com/snippets/jquery/smooth-scrolling/
 
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-    if (target.length) {
-      $('html,body').animate({
-        scrollTop: target.offset().top
-      }, 1000);
-      return false;
-    }
+  $('a[href*="#"]:not([href="#"])').click(function () {
+    var self     = this
+    var target   = $(self.hash)
+    var samePath = location.pathname.replace(/^\//, '') === self.pathname.replace(/^\//, '')
+    var sameHost = location.hostname === self.hostname
+
+    if (samePath && sameHost && target.length) {
+      var options = {
+        scrollTop: target.offset().top - $('.navbar-fixed-top').outerHeight()
+      }
+
+      $('html, body').animate(options, 1000, function () {
+        location.hash = self.hash
+      })
+
+      return false
     }
   })
-
 })

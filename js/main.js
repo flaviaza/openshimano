@@ -30,7 +30,7 @@ jQuery(function ($) {
   // SMOOTH SCROLLING
   // copied from https://css-tricks.com/snippets/jquery/smooth-scrolling/
 
-  $('a[href*="#"]:not([href="#"])').click(function () {
+  $('a[data-smooth][href*="#"]').click(function () {
     var self     = this
     var target   = $(self.hash)
     var samePath = location.pathname.replace(/^\//, '') === self.pathname.replace(/^\//, '')
